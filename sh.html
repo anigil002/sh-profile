@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafsiya Shamsudheen - Digital Marketing Professional</title>
+    <meta name="description" content="Experienced Digital Marketer specializing in SEO, SEM, and social media marketing with proven results in campaign optimization and growth strategies.">
+    <meta name="keywords" content="Digital Marketing, SEO, SEM, Social Media Marketing, Google Ads, Analytics, Dubai">
+    <meta name="author" content="Shafsiya Shamsudheen">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-backdrop {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .floating-icon {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .floating-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .stat-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 2s ease-in-out;
+        }
+        
+        @keyframes slideInLeft {
+            0% { transform: translateX(-100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideInRight {
+            0% { transform: translateX(100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+        
+        .contact-form input:focus, .contact-form textarea:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full nav-backdrop shadow-lg z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    Shafsiya
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium hover:scale-110">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium hover:scale-110">Skills</a>
+                    <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium hover:scale-110">Experience</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium hover:scale-110">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 floating-icon">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">About</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">Skills</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">Experience</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 hero-gradient text-white relative">
+        <!-- Floating Shapes -->
+        <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-float"></div>
+        <div class="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-bounce-gentle"></div>
+        <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-wiggle"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center">
+                <!-- Profile Image -->
+                <div class="mb-8 animate-fade-in">
+                    <div class="w-32 h-32 mx-auto bg-white/20 rounded-full flex items-center justify-center text-4xl font-bold backdrop-blur-lg border border-white/30 animate-pulse-glow">
+                        SS
+                    </div>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
+                    Shafsiya Shamsudheen
+                </h1>
+                <p class="text-xl md:text-2xl mb-6 opacity-90 animate-fade-in-delay">
+                    <i class="fas fa-rocket mr-2 animate-bounce-gentle"></i>
+                    Digital Marketing Professional
+                </p>
+                <p class="text-lg opacity-80 max-w-2xl mx-auto animate-fade-in-delay-2 leading-relaxed">
+                    Entry-level Digital Marketer with hands-on experience across SEO, SEM, and social media marketing. 
+                    Proven track record in campaign optimization and data-driven growth strategies.
+                </p>
+                
+                <!-- Stats Row -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 mb-8 animate-fade-in-delay-2">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold mb-1">20+</div>
+                        <div class="text-sm opacity-80">Clients Managed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold mb-1">1,000+</div>
+                        <div class="text-sm opacity-80">Followers Grown</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold mb-1">12%</div>
+                        <div class="text-sm opacity-80">ROI Improvement</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold mb-1">3</div>
+                        <div class="text-sm opacity-80">Months to 1K</div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 animate-fade-in-delay-3 space-x-4">
+                    <a href="#contact" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Get In Touch
+                    </a>
+                    <a href="tel:+971555312166" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="mt-8 flex justify-center space-x-6 animate-fade-in-delay-3">
+                    <a href="https://linkedin.com/in/shafsiya" target="_blank" class="floating-icon text-white/80 hover:text-white text-2xl">
+                        <i class="fab fa-linkedin animate-bounce-gentle"></i>
+                    </a>
+                    <a href="mailto:shafsi.sh@gmail.com" class="floating-icon text-white/80 hover:text-white text-2xl">
+                        <i class="fas fa-envelope animate-float"></i>
+                    </a>
+                    <a href="tel:+971555312166" class="floating-icon text-white/80 hover:text-white text-2xl">
+                        <i class="fas fa-phone animate-wiggle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-indigo-50 to-transparent"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    <i class="fas fa-user-circle text-indigo-600 mr-3 animate-bounce-gentle"></i>
+                    About Me
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="slide-in-left">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-chart-line text-indigo-600 mr-3 animate-bounce-gentle"></i>
+                        Digital Marketing Professional
+                    </h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        Entry-level Digital Marketer with hands-on experience across SEO, SEM, and social media marketing. 
+                        Comfortable with marketing analytics, reporting, and light process automation using Power BI/Power Query/Power Automate.
+                    </p>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        Track record includes managing campaigns for 20+ clients, building social channels from zero to 1,000+ followers in 3 months, 
+                        and improving campaign ROI/performance through data-driven optimizations.
+                    </p>
+                    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <p class="text-gray-700 leading-relaxed font-medium flex items-center">
+                            <i class="fas fa-bullseye text-indigo-600 mr-3 animate-pulse-glow"></i>
+                            Seeking a role where I can combine analytical thinking with marketing execution to drive measurable growth.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="slide-in-right">
+                    <div class="glass-card p-8 rounded-2xl shadow-xl">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-address-card text-indigo-600 mr-3 animate-float"></i>
+                            Contact Information
+                        </h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center p-3 rounded-lg hover:bg-indigo-50 transition-all group">
+                                <i class="fas fa-map-marker-alt text-indigo-600 w-6 mr-4 animate-wiggle group-hover:scale-110"></i>
+                                <span class="text-gray-700 group-hover:text-indigo-600">Discovery Gardens, Dubai, UAE</span>
+                            </div>
+                            <div class="flex items-center p-3 rounded-lg hover:bg-indigo-50 transition-all group">
+                                <i class="fas fa-phone text-indigo-600 w-6 mr-4 animate-bounce-gentle group-hover:scale-110"></i>
+                                <a href="tel:+971555312166" class="text-gray-700 hover:text-indigo-600 transition-colors">+971 55 531 2166</a>
+                            </div>
+                            <div class="flex items-center p-3 rounded-lg hover:bg-indigo-50 transition-all group">
+                                <i class="fas fa-envelope text-indigo-600 w-6 mr-4 animate-float group-hover:scale-110"></i>
+                                <a href="mailto:shafsi.sh@gmail.com" class="text-gray-700 hover:text-indigo-600 transition-colors">shafsi.sh@gmail.com</a>
+                            </div>
+                            <div class="flex items-center p-3 rounded-lg hover:bg-indigo-50 transition-all group">
+                                <i class="fab fa-linkedin text-indigo-600 w-6 mr-4 animate-bounce-gentle group-hover:scale-110"></i>
+                                <a href="https://linkedin.com/in/shafsiya" target="_blank" class="text-gray-700 hover:text-indigo-600 transition-colors">linkedin.com/in/shafsiya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    <i class="fas fa-cogs text-indigo-600 mr-3 animate-wiggle"></i>
+                    Skills & Expertise
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Core Skills -->
+                <div class="skill-card bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-rocket text-indigo-600 mr-3 animate-bounce-gentle text-2xl"></i>
+                        Core Skills
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center p-2 rounded-lg hover:bg-indigo-50 transition-all">
+                            <i class="fas fa-star text-indigo-500 mr-3 animate-pulse-glow"></i>
+                            SEO & SEM (on-page, keyword research, ad optimization)
+                        </li>
+                        <li class="flex items-center p-2 rounded-lg hover:bg-indigo-50 transition-all">
+                            <i class="fas fa-star text-indigo-500 mr-3 animate-pulse-glow"></i>
+                            Social Media Marketing (Facebook, Instagram, LinkedIn)
+                        </li>
+                        <li class="flex items-center p-2 rounded-lg hover:bg-indigo-50 transition-all">
+                            <i class="fas fa-star text-indigo-500 mr-3 animate-pulse-glow"></i>
+                            Marketing Analytics & Reporting
+                        </li>
+                        <li class="flex items-center p-2 rounded-lg hover:bg-indigo-50 transition-all">
+                            <i class="fas fa-star text-indigo-500 mr-3 animate-pulse-glow"></i>
+                            Process Automation (Power Automate)
+                        </li>
+                        <li class="flex items-center p-2 rounded-lg hover:bg-indigo-50 transition-all">
+                            <i class="fas fa-star text-indigo-500 mr-3 animate-pulse-glow"></i>
+                            Content Planning & Execution
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-tools text-indigo-600 mr-3 animate-wiggle text-2xl"></i>
+                        Tools & Platforms
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                            <span class="flex items-center text-gray-700">
+                                <i class="fab fa-google text-indigo-600 mr-2"></i>
+                                Google Ads
+                            </span>
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="progress-bar h-2 rounded-full" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                            <span class="flex items-center text-gray-700">
+                                <i class="fab fa-facebook text-indigo-600 mr-2"></i>
+                                Facebook Ads
+                            </span>
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="progress-bar h-2 rounded-full" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                            <span class="flex items-center text-gray-700">
+                                <i class="fas fa-chart-bar text-indigo-600 mr-2"></i>
+                                Google Analytics
+                            </span>
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="progress-bar h-2 rounded-full" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                            <span class="flex items-center text-gray-700">
+                                <i class="fas fa-chart-pie text-indigo-600 mr-2"></i>
+                                Power BI
+                            </span>
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="progress-bar h-2 rounded-full" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="skill-card bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-certificate text-indigo-600 mr-3 animate-float text-2xl"></i>
+                        Certifications
+                    </h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-center p-3 bg-gradient-to-r from-green-50 to-indigo-50 rounded-lg">
+                            <i class="fas fa-medal text-green-500 mr-3 animate-bounce-gentle"></i>
+                            <div>
+                                <div class="font-medium">Google Ads Search</div>
+                                <div class="text-sm text-gray-500">Certified</div>
+                            </div>
+                        </li>
+                        <li class="flex items-center p-3 bg-gradient-to-r from-green-50 to-indigo-50 rounded-lg">
+                            <i class="fas fa-medal text-green-500 mr-3 animate-bounce-gentle"></i>
+                            <div>
+                                <div class="font-medium">Google Analytics</div>
+                                <div class="text-sm text-gray-500">Certified</div>
+                            </div>
+                        </li>
+                        <li class="flex items-center p-3 bg-gradient-to-r from-green-50 to-indigo-50 rounded-lg">
+                            <i class="fas fa-medal text-green-500 mr-3 animate-bounce-gentle"></i>
+                            <div>
+                                <div class="font-medium">SEO Fundamentals</div>
+                                <div class="text-sm text-gray-500">Certified</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center justify-center">
+                    <i class="fas fa-globe text-indigo-600 mr-3 animate-wiggle"></i>
+                    Languages
+                </h3>
+                <div class="flex justify-center flex-wrap gap-6">
+                    <span class="flex items-center bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all transform hover:scale-105">
+                        <i class="fas fa-flag-usa text-indigo-600 mr-3 animate-bounce-gentle"></i>
+                        <span class="font-medium text-gray-700">English</span>
+                    </span>
+                    <span class="flex items-center bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all transform hover:scale-105">
+                        <i class="fas fa-flag text-indigo-600 mr-3 animate-bounce-gentle"></i>
+                        <span class="font-medium text-gray-700">Malayalam</span>
+                    </span>
+                    <span class="flex items-center bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all transform hover:scale-105">
+                        <i class="fas fa-flag text-indigo-600 mr-3 animate-bounce-gentle"></i>
+                        <span class="font-medium text-gray-700">Hindi</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    <i class="fas fa-briefcase text-indigo-600 mr-3 animate-bounce-gentle"></i>
+                    Professional Experience
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Aigfox Technologies -->
+                <div class="glass-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 flex items-center mb-2">
+                                <i class="fas fa-building text-indigo-600 mr-3 animate-float"></i>
+                                Digital Marketing Executive
+                            </h3>
+                            <p class="text-lg text-gray-700">Aigfox Technologies, India</p>
+                        </div>
+                        <span class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full font-semibold text-sm mt-2 md:mt-0">
+                            Mar 2023 – Dec 2024
+                        </span>
+                    </div>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start hover:bg-indigo-50 p-3 rounded-lg transition-all">
+                            <i class="fas fa-users text-green-500 mt-1 mr-4 animate-bounce-gentle text-lg"></i>
+                            <span>Managed multi-channel campaigns for <strong>20+ clients</strong>; monitored KPIs and executed optimizations to improve engagement and sales.</span>
+                        </li>
+                        <li class="flex items-start hover:bg-indigo-50 p-3 rounded-lg transition-all">
+                            <i class="fas fa-chart-line text-green-500 mt-1 mr-4 animate-float text-lg"></i>
+                            <span>Launched and optimized new social accounts; grew followers from <strong>0 to 1,000+ in 3 months</strong> via SEO-aligned, analytics-driven content plans.</span>
+                        </li>
+                        <li class="flex items-start hover:bg-indigo-50 p-3 rounded-lg transition-all">
+                            <i class="fas fa-chart-bar text-green-500 mt-1 mr-4 animate-pulse-glow text-lg"></i>
+                            <span>Built recurring performance reports; translated insights into experiments that lifted engagement rates and supported revenue growth.</span>
+                        </li>
+                        <li class="flex items-start hover:bg-indigo-50 p-3 rounded-lg transition-all">
+                            <i class="fas fa-cogs text-green-500 mt-1 mr-4 animate-wiggle text-lg"></i>
+                            <span>Partnered with internal teams/clients to automate routine steps (posting, reporting), improving consistency and reducing manual effort.</span>
+                        </li>
+                        <li class="flex items-start hover:bg-indigo-50 p-3 rounded-lg transition-all">
+                            <i class="fas fa-rocket text-green-500 mt-1 mr-4 animate-bounce-gentle text-lg"></i>
+                            <span>Contributed to continuous improvement of internal marketing workflows to better allocate resources and boost efficiency.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- G-Tec Computer Education -->
+                <div class="glass-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 flex items-center mb-2">
+                                <i class="fas fa-graduation-cap text-indigo-600 mr-3 animate-float"></i>
+                                Digital Marketing Intern
+                            </h3>
+                            <p class="text-lg text-gray-700">G-Tec Computer Education, India</p>
+                        </div>
+                        <span class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full font-semibold text-sm mt-2 md:mt-0">
+                            1-month program
+                        </span>
+                    </div>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start hover:bg-indigo-50 p-3 rounded-lg transition-all">
+                            <i class="fas fa-chart-line text-green-500 mt-1 mr-4 animate-bounce-gentle text-lg"></i>
+                            <span>Applied digital marketing concepts to live campaigns; improved campaign performance by <strong>~10%</strong>.</span>
+                        </li>
+                        <li class="flex items-start hover:bg-indigo-50 p-3 rounded-lg transition-all">
+                            <i class="fas fa-dollar-sign text-green-500 mt-1 mr-4 animate-float text-lg"></i>
+                            <span>Helped optimize ad spend, contributing to a <strong>~12% improvement in ROI</strong>.</span>
+                        </li>
+                        <li class="flex items-start hover:bg-indigo-50 p-3 rounded-lg transition-all">
+                            <i class="fas fa-lightbulb text-green-500 mt-1 mr-4 animate-pulse-glow text-lg"></i>
+                            <span>Proposed small process improvements that strengthened reporting and campaign effectiveness.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="mt-16 bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center flex items-center justify-center">
+                    <i class="fas fa-university text-indigo-600 mr-3 animate-bounce-gentle"></i>
+                    Education
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                        <i class="fas fa-certificate text-indigo-600 text-3xl mb-4 animate-float"></i>
+                        <h4 class="text-lg font-semibold text-gray-900">Professional Diploma in Digital Marketing</h4>
+                        <p class="text-gray-700 font-medium">2022–2023</p>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                        <i class="fas fa-graduation-cap text-indigo-600 text-3xl mb-4 animate-wiggle"></i>
+                        <h4 class="text-lg font-semibold text-gray-900">Bachelor of Computer Applications</h4>
+                        <p class="text-gray-700 font-medium">2011–2014</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 hero-gradient text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">
+                    <i class="fas fa-envelope text-white mr-3 animate-bounce-gentle"></i>
+                    Let's Connect
+                </h2>
+                <div class="w-20 h-1 bg-white mx-auto rounded-full"></div>
+                <p class="text-xl mt-4 opacity-90">Ready to drive measurable growth for your business</p>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <form class="contact-form glass-card p-8 rounded-2xl shadow-2xl text-gray-800">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-indigo-600">
+                                <i class="fas fa-user mr-2"></i>Name *
+                            </label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-indigo-600">
+                                <i class="fas fa-envelope mr-2"></i>Email *
+                            </label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold mb-2 text-indigo-600">
+                            <i class="fas fa-tag mr-2"></i>Subject
+                        </label>
+                        <input type="text" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold mb-2 text-indigo-600">
+                            <i class="fas fa-comment mr-2"></i>Message *
+                        </label>
+                        <textarea name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-6 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all font-semibold transform hover:scale-105 hover:shadow-xl flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2 animate-float"></i>
+                        Send Message
+                    </button>
+                </form>
+
+                <!-- Direct Contact -->
+                <div class="mt-8 text-center">
+                    <p class="mb-6 text-lg opacity-90">Or reach out directly</p>
+                    <div class="flex justify-center space-x-8 flex-wrap gap-4">
+                        <a href="mailto:shafsi.sh@gmail.com" class="glass-card p-4 rounded-xl hover:scale-110 transition-all floating-icon flex items-center space-x-3">
+                            <i class="fas fa-envelope text-2xl animate-float"></i>
+                            <span class="hidden md:block">Email</span>
+                        </a>
+                        <a href="https://linkedin.com/in/shafsiya" target="_blank" class="glass-card p-4 rounded-xl hover:scale-110 transition-all floating-icon flex items-center space-x-3">
+                            <i class="fab fa-linkedin text-2xl animate-bounce-gentle"></i>
+                            <span class="hidden md:block">LinkedIn</span>
+                        </a>
+                        <a href="tel:+971555312166" class="glass-card p-4 rounded-xl hover:scale-110 transition-all floating-icon flex items-center space-x-3">
+                            <i class="fas fa-phone text-2xl animate-wiggle"></i>
+                            <span class="hidden md:block">Call</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <h3 class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                    Shafsiya Shamsudheen
+                </h3>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://linkedin.com/in/shafsiya" target="_blank" class="floating-icon text-gray-400 hover:text-white">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="mailto:shafsi.sh@gmail.com" class="floating-icon text-gray-400 hover:text-white">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <a href="tel:+971555312166" class="floating-icon text-gray-400 hover:text-white">
+                    <i class="fas fa-phone text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400">&copy; 2024 Shafsiya Shamsudheen. All rights reserved.</p>
+            <p class="mt-2 text-gray-500">Digital Marketing Professional | Dubai, UAE</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all opacity-0 pointer-events-none z-50">
+        <i class="fas fa-arrow-up text-xl animate-bounce-gentle"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu after clicking
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-slide-up');
+                        
+                        // Animate progress bars
+                        const progressBars = entry.target.querySelectorAll('.progress-bar');
+                        progressBars.forEach(bar => {
+                            const width = bar.getAttribute('data-width');
+                            if (width) {
+                                setTimeout(() => {
+                                    bar.style.width = width;
+                                }, 300);
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Scroll to top button
+            const scrollTopBtn = document.getElementById('scroll-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    scrollTopBtn.classList.add('opacity-100');
+                } else {
+                    scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                    scrollTopBtn.classList.remove('opacity-100');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Form submission (placeholder)
+            const contactForm = document.querySelector('.contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Add your form submission logic here
+                    alert('Thank you for your message! I will get back to you soon.');
+                    this.reset();
+                });
+            }
+
+            // Add loading animation to navigation on scroll
+            let lastScrollTop = 0;
+            const nav = document.querySelector('nav');
+            
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down
+                    nav.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    nav.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
+
+            // Enhanced hover effects for skill cards
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-12px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+
+            // Add click ripple effect
+            document.querySelectorAll('.skill-card, .glass-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    const ripple = document.createElement('div');
+                    ripple.classList.add('absolute', 'bg-indigo-500', 'opacity-25', 'rounded-full', 'transform', 'scale-0', 'animate-ping');
+                    
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 1000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
